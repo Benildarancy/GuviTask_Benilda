@@ -1,4 +1,4 @@
-package Q2;
+package org.task3.src.Q2;
 
 public class Employee implements Taxable{
     int empId;
@@ -38,8 +38,18 @@ public class Employee implements Taxable{
     }
     @Override
     public void calcTax() {
-        Double tax = empSalary * 10.5;
-        System.out.println(tax);
+        double tax =0;
+        if(empSalary<=200000)
+            tax=0;
+        else if(empSalary<=300000)
+            tax=0.1*(empSalary-200000);
+        else if(empSalary<=500000)
+            tax=(0.2*(empSalary-300000))+(0.1*100000);
+        else if(empSalary<=1000000)
+            tax=(0.3*(empSalary-500000))+(0.2*200000)+(0.1*100000);
+        else
+            tax=(0.4*(empSalary-1000000))+(0.3*500000)+(0.2*200000)+(0.1*100000);
+        System.out.println("Income tax amount is "+tax);
 
     }
 }

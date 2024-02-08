@@ -1,4 +1,4 @@
-package Q1;
+package org.task3.src.Q1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,13 +19,14 @@ public class Library {
             if (b.getBookId() == bookId) {
                 b.setTitle("newTitle");
                 b.setAuthor("newAuthor");
+                System.out.println(b.toString());
                 break;
             }
         }
     }
     public void searchBook(int bookId){
        List<Book> s = books.stream().filter(a -> a.getBookId() == bookId).collect(Collectors.toList());
-        System.out.println(s);
+        System.out.println(s.toString());
     }
     public void deleteBook(int bookId){
     books.removeIf(b -> b.getBookId()== bookId);

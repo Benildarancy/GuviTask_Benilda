@@ -1,4 +1,4 @@
-package Q2;
+package org.task3.src.Q2;
 
 public class Product implements Taxable{
     int proId;
@@ -37,8 +37,12 @@ public class Product implements Taxable{
 
     @Override
     public void calcTax() {
-        Double tax = proPrice * 7;
-        System.out.println(tax);
+        double salesTax = 7;
+
+        salesTax = proPrice / (100 + salesTax) * salesTax;
+        System.out.println("The sales tax is:"+salesTax);
+
+
 
     }
 }

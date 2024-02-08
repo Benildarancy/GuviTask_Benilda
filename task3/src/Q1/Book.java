@@ -1,4 +1,4 @@
-package Q1;
+package org.task3.src.Q1;
 
 public class Book {
     int bookId;
@@ -6,11 +6,21 @@ public class Book {
     String author;
     Boolean isAvailable;
 
-    public Book(int bookId, String title, String author,Boolean isAvailable) {
+    public Book(int bookId, String title, String author, Boolean isAvailable) {
         this.bookId = bookId;
         this.title = title;
         this.author = author;
-        this.isAvailable=isAvailable;
+        this.isAvailable = isAvailable;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "bookId=" + bookId +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", isAvailable=" + isAvailable +
+                '}';
     }
 
     public int getBookId() {
@@ -45,5 +55,6 @@ public class Book {
         isAvailable = available;
     }
 }
+
 
 
